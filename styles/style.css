@@ -1,0 +1,49 @@
+.top {
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    color: white;
+}
+
+.search {
+    margin-left: 20px;
+    border-radius: 25px;
+    border-width: 3px;
+    border-color: lightblue;
+    border-style: solid;
+    background: white;
+    padding: 10px;
+    width: 50%;
+    color: grey;
+    font-size: 16px;
+}
+
+.search:focus {
+    outline: none;
+    border-color: cornflowerblue;
+}
+
+select {
+    font-size: 16px;
+}
+
+.checkbox-select {
+    background-color: white;
+    position: absolute;
+    color: black;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+h1 {
+    margin-left: 20px;
+}

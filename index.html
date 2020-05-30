@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>CV Groceries</title>
+</head>
+<body id="body">
+<div class="top">
+    <table style="width:100%">
+        <tr>
+            <td>
+                <h1>CV Groceries</h1>
+            </td>
+            <td>
+                <label>
+                    <input type="text" id="search" class="search" name="search" placeholder="Search products...">
+                </label>
+            </td>
+            <td>
+                Filter:
+            </td>
+
+            <td>
+                <div class="labels">
+                    <label>
+                        <select onclick="checkboxSelect('preferences')" id="preferences">
+                            <option style="display:none">Preferences</option>
+                        </select>
+                    </label>
+                    <div id="preference-checkbox" class="checkbox-select">
+                        <input type="checkbox" id="vegetarian" value="Vegetarian">
+                        <label for="vegetarian">Vegetarian</label><br>
+                        <input type="checkbox" id="gluten-free" value="Gluten-free">
+                        <label for="gluten-free">Gluten-free</label><br>
+                        <input type="checkbox" id="organic" value="Organic">
+                        <label for="organic">Organic</label><br>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="labels">
+                    <label>
+                        <select onclick="checkboxSelect('categories')" id="categories">
+                            <option style="display:none">Categories</option>
+                        </select>
+                    </label>
+                    <div id="category-checkbox" class="checkbox-select">
+                        <input type="checkbox" id="fruit" value="Fruits">
+                        <label for="fruit">Fruits</label><br>
+                        <input type="checkbox" id="vegetables" value="Vegetables">
+                        <label for="vegetables">Vegetables</label><br>
+                        <input type="checkbox" id="dairy" value="Dairy">
+                        <label for="dairy">Dairy</label><br>
+                        <input type="checkbox" id="meat" value="Meat">
+                        <label for="meat">Meat</label><br>
+                        <input type="checkbox" id="beverages" value="Beverages">
+                        <label for="beverages">Beverages</label><br>
+                        <input type="checkbox" id="baking" value="Baking">
+                        <label for="baking">Baking</label><br>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<script src="scripts/main.js"></script>
+</body>
+</html>
