@@ -62,7 +62,7 @@ function displayProducts() {
     const preferencesOn = preferencesChecked.includes(true);
     const categoriesOn = categoriesChecked.includes(true);
 
-    productListElem.innerHTML = '';
+    const productsToDisplay = [];
     productLoop:
         for (let i = 0; i < productList.length; i++) {
             const product = productList[i];
@@ -81,9 +81,24 @@ function displayProducts() {
                         }
                     }
                 }
-                productListElem.innerHTML += '<li>' + product.name + '</li>'
+                productsToDisplay.push(i);
             }
         }
+
+    productListElem.innerHTML = '';
+    let row = productListElem.insertRow(0);
+    let rowCounter = 0, cellCounter = 0;
+    for (let i = 0; i < productsToDisplay.length; i++) {
+        if (cellCounter === 7) {
+            rowCounter++;
+            row = productListElem.insertRow(rowCounter);
+            cellCounter = 0;
+        }
+        let cell = row.insertCell(cellCounter);
+        cellCounter++;
+        const cellImage = '<img class="product-image" src="' + productList[i].image + '" alt="' + productList[i].name + '"><br>';
+        cell.innerHTML = '<div class="product-item">' + cellImage + productList[i].name + '<br>$' + productList[i].price + '</div>';
+    }
 }
 
 displayProducts();
