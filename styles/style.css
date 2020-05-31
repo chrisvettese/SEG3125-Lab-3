@@ -17,14 +17,16 @@
     color: grey;
     font-size: 16px;
 }
+.preferences {
+    z-index: 2;
+}
+.preference-checkboxes {
+    z-index: 2;
+}
 
 .search:focus {
     outline: none;
     border-color: cornflowerblue;
-}
-
-select {
-    font-size: 16px;
 }
 
 .checkbox-select {
@@ -32,6 +34,12 @@ select {
     position: absolute;
     color: black;
     font-size: 16px;
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+.select-button:focus {
+    background-color: lightskyblue;
 }
 
 body {

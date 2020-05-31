@@ -37,9 +37,4 @@ function closeSelections(event) {
         showCategories = false;
         categoryCheckbox.style.display = 'none';
     }
-
-    const target = event.target.htmlFor;
-    if (preferences.includes(target) || categories.includes(target)) {
-        displayProducts();
-    }
 }
