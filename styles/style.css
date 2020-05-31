@@ -33,9 +33,14 @@
     background-color: white;
     position: absolute;
     color: black;
-    font-size: 16px;
     outline-style: solid;
     outline-width: 1px;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.standard-font {
+    font-size: 16px;
 }
 
 .select-button:focus {
