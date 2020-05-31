@@ -8,22 +8,21 @@ const categories = {
 };
 const preferences = ["vegetarian", "gluten-free", "organic"];
 
-
 const productList = [];
 
 add('Apple', '0.80', 'resources/apple.jpg', true, true, true, categories.fruits);
 add('Orange', '0.99', 'resources/orange.jpg', true, true, false, categories.fruits);
 add('Watermelon', '2.00', 'resources/watermelon.jpg', true, true, true, categories.fruits);
 add('Carrots', '3.50', 'resources/carrots.jpg', true, true, true, categories.vegetables);
-add('Celery', '0.99', 'resources/orange.jpg', true, true, false, categories.vegetables);
+add('Celery', '0.99', 'resources/celery.jpg', true, true, false, categories.vegetables);
 add('Broccoli', '1.50', 'resources/broccoli.jpg', true, true, false, categories.vegetables);
 add('Skim Milk', '4.99', 'resources/milk.jpg', true, true, false, categories.dairy);
 add('Cheddar Cheese', '2.20', 'resources/cheese.jpg', true, true, false, categories.dairy);
 add('Unsalted Butter', '6.99', 'resources/butter.jpg', true, true, true, categories.dairy);
-add('Chicken', '5.50', 'resources/chicken.jpg', false, true, false, categories.meat);
-add('Salmon', '3.35', 'resources/salmon.jpg', false, true, true, categories.meat);
-add('Beef', '6.50', 'resources/beef.jpg', false, true, false, categories.meat);
-add('Coca Cola', '1.99', 'resources/milk.jpg', true, true, false, categories.beverages);
+add('Chicken Breast', '5.50', 'resources/chicken.png', false, true, false, categories.meat);
+add('Salmon Fillet', '3.35', 'resources/salmon.jpg', false, true, true, categories.meat);
+add('Steak', '6.50', 'resources/steak.jpg', false, true, false, categories.meat);
+add('Coca Cola', '1.99', 'resources/coke.jpg', true, true, false, categories.beverages);
 add('Sprite', '1.99', 'resources/sprite.jpg', true, true, false, categories.beverages);
 add('Pepsi', '1.99', 'resources/pepsi.jpg', true, true, false, categories.beverages);
 add('Flour', '2.33', 'resources/flour.jpg', true, false, false, categories.baking);
