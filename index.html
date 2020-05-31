@@ -14,7 +14,7 @@
             </td>
             <td>
                 <label>
-                    <input type="text" id="search" class="search" name="search" placeholder="Search products...">
+                    <input type="text" id="search" class="search" name="search" placeholder="Search products..." onInput="displayProducts()">
                 </label>
             </td>
             <td>
@@ -29,11 +29,11 @@
                         </select>
                     </label>
                     <div id="preference-checkbox" class="checkbox-select">
-                        <input type="checkbox" id="vegetarian" value="Vegetarian">
+                        <input type="checkbox" id="vegetarian" value="Vegetarian" class="preference-checkboxes">
                         <label for="vegetarian">Vegetarian</label><br>
-                        <input type="checkbox" id="gluten-free" value="Gluten-free">
+                        <input type="checkbox" id="gluten-free" value="Gluten-free" class="preference-checkboxes">
                         <label for="gluten-free">Gluten-free</label><br>
-                        <input type="checkbox" id="organic" value="Organic">
+                        <input type="checkbox" id="organic" value="Organic" class="preference-checkboxes">
                         <label for="organic">Organic</label><br>
                     </div>
                 </div>
@@ -46,17 +46,17 @@
                         </select>
                     </label>
                     <div id="category-checkbox" class="checkbox-select">
-                        <input type="checkbox" id="fruit" value="Fruits">
-                        <label for="fruit">Fruits</label><br>
-                        <input type="checkbox" id="vegetables" value="Vegetables">
+                        <input type="checkbox" id="fruits" value="Fruits" class="category-checkboxes">
+                        <label for="fruits">Fruits</label><br>
+                        <input type="checkbox" id="vegetables" value="Vegetables" class="category-checkboxes">
                         <label for="vegetables">Vegetables</label><br>
-                        <input type="checkbox" id="dairy" value="Dairy">
+                        <input type="checkbox" id="dairy" value="Dairy" class="category-checkboxes">
                         <label for="dairy">Dairy</label><br>
-                        <input type="checkbox" id="meat" value="Meat">
+                        <input type="checkbox" id="meat" value="Meat" class="category-checkboxes">
                         <label for="meat">Meat</label><br>
-                        <input type="checkbox" id="beverages" value="Beverages">
+                        <input type="checkbox" id="beverages" value="Beverages" class="category-checkboxes">
                         <label for="beverages">Beverages</label><br>
-                        <input type="checkbox" id="baking" value="Baking">
+                        <input type="checkbox" id="baking" value="Baking" class="category-checkboxes">
                         <label for="baking">Baking</label><br>
                     </div>
                 </div>
@@ -64,6 +64,8 @@
         </tr>
     </table>
 </div>
-<script src="scripts/main.js"></script>
+<ul id="product-list"></ul>
+<script src="scripts/groceries.js"></script>
+<script src="scripts/productFilters.js"></script>
 </body>
 </html>

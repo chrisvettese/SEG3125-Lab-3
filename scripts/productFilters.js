@@ -1,10 +1,10 @@
 let showPreferences = false;
 let showCategories = false;
 
-let preferenceCheckbox = document.getElementById('preference-checkbox');
-preferenceCheckbox.style.display = "none";
-let categoryCheckbox = document.getElementById('category-checkbox');
-categoryCheckbox.style.display = "none";
+const preferenceCheckbox = document.getElementById('preference-checkbox');
+preferenceCheckbox.style.display = 'none';
+const categoryCheckbox = document.getElementById('category-checkbox');
+categoryCheckbox.style.display = 'none';
 
 document.getElementById('body').addEventListener('click', e => closeSelections(e));
 
@@ -36,5 +36,10 @@ function closeSelections(event) {
     if (event.target.id !== 'categories' && event.target.id !== 'category-checkbox' && parentId !== 'category-checkbox') {
         showCategories = false;
         categoryCheckbox.style.display = 'none';
+    }
+
+    const target = event.target.htmlFor;
+    if (preferences.includes(target) || categories.includes(target)) {
+        displayProducts();
     }
 }
