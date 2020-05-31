@@ -89,6 +89,7 @@ function displayProducts() {
     let row = productListElem.insertRow(0);
     let rowCounter = 0, cellCounter = 0;
     for (let i = 0; i < productsToDisplay.length; i++) {
+        const index = productsToDisplay[i];
         if (cellCounter === 7) {
             rowCounter++;
             row = productListElem.insertRow(rowCounter);
@@ -96,8 +97,8 @@ function displayProducts() {
         }
         let cell = row.insertCell(cellCounter);
         cellCounter++;
-        const cellImage = '<img class="product-image" src="' + productList[i].image + '" alt="' + productList[i].name + '"><br>';
-        cell.innerHTML = '<div class="product-item">' + cellImage + productList[i].name + '<br>$' + productList[i].price + '</div>';
+        const cellImage = '<img class="product-image" src="' + productList[index].image + '" alt="' + productList[index].name + '"><br>';
+        cell.innerHTML = '<div class="product-item">' + cellImage + productList[index].name + '<br>$' + productList[index].price + '</div>';
     }
 }
 
