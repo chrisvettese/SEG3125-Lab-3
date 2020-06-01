@@ -7,25 +7,24 @@
 </head>
 <body id="body">
 <div class="top">
-    <table style="width:100%">
+    <table style="width:100%" class="main-table">
         <tr>
-            <td>
+            <td class="title-column">
                 <h1>CV Groceries</h1>
             </td>
-            <td>
+            <td class="search-column">
                 <label>
                     <input type="text" id="search" class="search" name="search" placeholder="Search products..."
                            onInput="displayProducts()">
                 </label>
             </td>
-            <td class="standard-font">
+            <td class="filter-text">
                 Filter:
             </td>
-
-            <td>
+            <td class="select-column">
                 <div class="labels">
                     <label>
-                        <button onclick="checkboxSelect('preferences')" id="preferences" class="select-button">
+                        <button onclick="customDropdown('preferences')" id="preferences" class="select-button">
                             Preferences &#x25BC;
                         </button>
                     </label>
@@ -39,10 +38,10 @@
                     </div>
                 </div>
             </td>
-            <td>
+            <td class="select-column">
                 <div class="labels">
                     <label>
-                        <button onclick="checkboxSelect('categories')" id="categories" class="select-button">
+                        <button onclick="customDropdown('categories')" id="categories" class="select-button">
                             Categories &#x25BC;
                         </button>
                     </label>
@@ -62,6 +61,11 @@
                     </div>
                 </div>
             </td>
+            <td>
+                <input type="image" src="resources/cart.jpg" alt="Shopping Cart" id="cart"
+                       onclick="customDropdown('cart')">
+                <div id="cart-display"></div>
+            </td>
         </tr>
     </table>
 </div>
@@ -69,7 +73,8 @@
     <table id="product-list"></table>
 </div>
 <footer class="bottom">Website designed by Chris Vettese.</footer>
+<script src="scripts/cart.js"></script>
 <script src="scripts/groceries.js"></script>
-<script src="scripts/productFilters.js"></script>
+<script src="scripts/dropdowns.js"></script>
 </body>
 </html>

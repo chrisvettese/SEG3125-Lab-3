@@ -1,14 +1,17 @@
 let showPreferences = false;
 let showCategories = false;
+let showCart = false;
 
 const preferenceCheckbox = document.getElementById('preference-checkbox');
 preferenceCheckbox.style.display = 'none';
 const categoryCheckbox = document.getElementById('category-checkbox');
 categoryCheckbox.style.display = 'none';
+const cartDisplay = document.getElementById('cart-display');
+cartDisplay.style.display = 'none';
 
 document.getElementById('body').addEventListener('click', e => closeSelections(e));
 
-function checkboxSelect(dropdown) {
+function customDropdown(dropdown) {
     if (dropdown === 'preferences') {
         showPreferences = !showPreferences;
         if (showPreferences) {
@@ -16,12 +19,20 @@ function checkboxSelect(dropdown) {
         } else {
             preferenceCheckbox.style.display = 'none';
         }
-    } else {
+    } else if (dropdown === "categories") {
         showCategories = !showCategories;
         if (showCategories) {
             categoryCheckbox.style.display = 'block';
         } else {
             categoryCheckbox.style.display = 'none';
+        }
+    } else {
+        showCart = !showCart;
+        if (showCart) {
+            displayShoppingCart();
+            cartDisplay.style.display = 'block';
+        } else {
+            cartDisplay.style.display = 'none';
         }
     }
 }
@@ -36,5 +47,9 @@ function closeSelections(event) {
     if (event.target.id !== 'categories' && event.target.id !== 'category-checkbox' && parentId !== 'category-checkbox') {
         showCategories = false;
         categoryCheckbox.style.display = 'none';
+    }
+    if (event.target.id !== 'cart' && event.target.id !== 'cart-display' && parentId !== 'cart-display') {
+        showCart = false;
+        cartDisplay.style.display = 'none';
     }
 }

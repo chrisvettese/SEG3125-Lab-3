@@ -97,8 +97,10 @@ function displayProducts() {
         }
         let cell = row.insertCell(cellCounter);
         cellCounter++;
-        const cellImage = '<img class="product-image" src="' + productList[index].image + '" alt="' + productList[index].name + '"><br>';
-        cell.innerHTML = '<div class="product-item">' + cellImage + productList[index].name + '<br>$' + productList[index].price + '</div>';
+        const name = productList[index].name;
+        const cellImage = '<img class="product-image" src="' + productList[index].image + '" alt="' + name + '"><br>';
+        const cellButton = '<br><button onclick="addToCart(' + index + ')">Add</button><br>';
+        cell.innerHTML = '<div class="product-item">' + cellImage + name + ' $' + productList[index].price + cellButton + '</div>';
     }
 }
 
