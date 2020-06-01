@@ -29,6 +29,8 @@ add('Flour', '2.33', 'resources/flour.jpg', true, false, false, categories.bakin
 add('Brown Sugar', '3.15', 'resources/sugar.jpg', true, true, false, categories.baking);
 add('Baking Powder', '2.75', 'resources/bakingpowder.jpg', true, true, false, categories.baking);
 
+productList.sort((p1, p2) => (p1.price > p2.price) ? 1 : -1);
+
 Array.from(document.getElementsByClassName('preference-checkboxes')).forEach(checkbox => {
     checkbox.addEventListener('change', () => displayProducts());
 });

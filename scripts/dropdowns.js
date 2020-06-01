@@ -29,7 +29,7 @@ function customDropdown(dropdown) {
     } else {
         showCart = !showCart;
         if (showCart) {
-            displayShoppingCart();
+            displayShoppingCart(cartDisplay);
             cartDisplay.style.display = 'block';
         } else {
             cartDisplay.style.display = 'none';

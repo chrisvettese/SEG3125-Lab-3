@@ -101,6 +101,16 @@
     top: 20%;
 }
 
+#cart-display {
+    background-color: white;
+    position: absolute;
+    color: black;
+    outline-style: solid;
+    outline-width: 1px;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
