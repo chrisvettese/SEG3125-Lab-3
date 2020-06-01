@@ -48,7 +48,7 @@ function closeSelections(event) {
         showCategories = false;
         categoryCheckbox.style.display = 'none';
     }
-    if (event.target.id !== 'cart' && event.target.id !== 'cart-display' && parentId !== 'cart-display') {
+    if (event.target.className !== 'delete-button' && event.target.id !== 'cart' && event.target.id !== 'cart-display' && parentId !== 'cart-display') {
         showCart = false;
         cartDisplay.style.display = 'none';
     }

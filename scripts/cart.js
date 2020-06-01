@@ -11,7 +11,8 @@ function displayShoppingCart(cartElement) {
         price = price.toString();
         price = zeroify(price);
         const name = productList[cartItemIndices[i]].name;
-        cartElement.innerHTML += '<li>' + count + ' x ' + name + ': $' + price + '</li>';
+        const deleteButton = '<button class="delete-button" onclick="removeFromCart(' + i + ')">X</button>';
+        cartElement.innerHTML += '<li>' + count + ' x ' + name + ': $' + price + deleteButton + '</li>';
     }
     totalPrice = totalPrice.toString();
     totalPrice = zeroify(totalPrice);
@@ -29,12 +30,23 @@ function addToCart(index) {
     }
 }
 
+function removeFromCart(cartIndex) {
+    cartItemIndices.splice(cartIndex, 1);
+    cartCounts.splice(cartIndex, 1);
+    displayShoppingCart(document.getElementById('cart-display'));
+
+}
+
 function zeroify(priceStr) {
     if (priceStr[priceStr.length - 2] === '.') {
         priceStr += '0';
     }
     else if (!priceStr.includes('.')) {
         priceStr += '.00';
+    }
+    if (priceStr[priceStr.length - 3] !== '.') {
+        const decimalIndex = priceStr.indexOf('.');
+        priceStr = priceStr.substring(0, decimalIndex + 3);
     }
     return priceStr;
 }
