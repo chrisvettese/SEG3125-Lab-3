@@ -40,13 +40,13 @@ Array.from(document.getElementsByClassName('category-checkboxes')).forEach(check
 
 function add(name, price, image, vegetarian, glutenFree, organic, category) {
     productList.push({
-        name: name,
-        price: price,
-        image: image,
-        vegetarian: vegetarian,
+        'name': name,
+        'price': price,
+        'image': image,
+        'vegetarian': vegetarian,
         'gluten-free': glutenFree,
-        organic: organic,
-        category: category
+        'organic': organic,
+        'category': category
     })
 }
 
@@ -101,7 +101,7 @@ function displayProducts() {
         cellCounter++;
         const name = productList[index].name;
         const cellImage = '<img class="product-image" src="' + productList[index].image + '" alt="' + name + '"><br>';
-        const cellButton = '<br><button onclick="addToCart(' + index + ')">Add</button><br>';
+        const cellButton = '<br><button class="add-button" onclick="addToCart(' + index + ')">Add</button><br>';
         cell.innerHTML = '<div class="product-item">' + cellImage + name + ' $' + productList[index].price + cellButton + '</div>';
     }
 }

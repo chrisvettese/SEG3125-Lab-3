@@ -43,6 +43,13 @@
     width: 10%;
 }
 
+.adjust-button {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    min-width: 25px;
+    font-weight: bold;
+}
+
 .checkbox-select {
     background-color: white;
     position: absolute;
@@ -102,13 +109,24 @@
 }
 
 #cart-display {
-    background-color: white;
+    background-color: whitesmoke;
     position: absolute;
     color: black;
-    outline-style: solid;
-    outline-width: 1px;
     font-size: 16px;
+    margin-left: 20px;
+    border-radius: 25px;
+    border-width: 3px;
+    border-color: lightblue;
+    border-style: solid;
+    top: 100px;
+    right: 20px;
     padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.add-button {
+    font-size: 16px;
 }
 
 body {
@@ -123,4 +141,8 @@ html {
 
 h1 {
     margin-left: 20px;
+}
+
+li {
+    list-style: none;
 }
